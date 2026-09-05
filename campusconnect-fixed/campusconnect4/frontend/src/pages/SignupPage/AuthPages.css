@@ -1,0 +1,132 @@
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: radial-gradient(ellipse at top, rgba(108,99,255,0.08) 0%, transparent 60%);
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: var(--shadow);
+}
+
+.auth-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 28px;
+}
+
+.auth-brand span:first-child { font-size: 1.4rem; }
+
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.auth-error {
+  background: rgba(255,77,109,0.1);
+  border: 1px solid rgba(255,77,109,0.3);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  color: var(--danger);
+  margin-bottom: 16px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-error {
+  border-color: var(--danger) !important;
+}
+
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(255,77,109,0.15) !important;
+}
+
+.field-error {
+  font-size: 0.78rem;
+  color: var(--danger);
+  margin-top: 2px;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 13px;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.auth-switch {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 20px;
+}
+
+.auth-switch a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.auth-switch a:hover { text-decoration: underline; }
+
+/* Demo credentials box */
+.demo-creds {
+  margin-top: 20px;
+  padding: 14px;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.demo-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.demo-fill {
+  background: none;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  color: var(--accent);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.demo-fill:hover {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+@media (max-width: 480px) {
+  .auth-card { padding: 28px 20px; }
+}

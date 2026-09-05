@@ -1,0 +1,274 @@
+.college-page { padding-bottom: 80px; }
+
+.college-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; flex-wrap: wrap;
+  gap: 16px; margin: 32px 0 24px;
+}
+.college-title { font-size: 1.7rem; font-weight: 800; margin: 0 0 4px; }
+.college-sub   { color: var(--text-secondary); font-size: .93rem; margin: 0; }
+
+.college-stats {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.college-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex; flex-direction: column; align-items: center;
+  min-width: 120px;
+}
+.cstat-value { font-size: 1.6rem; font-weight: 800; color: var(--primary); }
+.cstat-label { font-size: .78rem; color: var(--text-secondary); }
+
+/* Form card */
+.college-form-card {
+  background: var(--surface);
+  border: 1.5px solid var(--primary);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+.form-card-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px;
+}
+.form-card-title { font-size: 1.1rem; font-weight: 700; margin: 0; }
+.close-btn {
+  background: none; border: none; font-size: 1.1rem;
+  cursor: pointer; color: var(--text-secondary);
+  width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center;
+  transition: background .15s;
+}
+.close-btn:hover { background: var(--border); }
+
+.college-form .cf-row-2 {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;
+}
+.college-form .cf-row-3 {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;
+}
+.college-form .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.college-form label { font-size: .83rem; font-weight: 600; color: var(--text-secondary); }
+.form-textarea { resize: vertical; min-height: 80px; }
+.form-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+
+@media (max-width: 700px) {
+  .college-form .cf-row-2,
+  .college-form .cf-row-3 { grid-template-columns: 1fr; }
+}
+
+/* Section heading */
+.section-heading { font-size: 1.15rem; font-weight: 700; margin: 0 0 20px; }
+
+/* Empty */
+.empty-events {
+  text-align: center;
+  padding: 60px 24px;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  color: var(--text-secondary);
+}
+.empty-events p { margin-bottom: 8px; font-size: .97rem; }
+.empty-events .btn { margin-top: 16px; }
+
+/* Events grid */
+.college-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+.college-event-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+  transition: transform .18s, box-shadow .18s;
+}
+.college-event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+}
+.cec-poster-wrap {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.cec-poster {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .3s;
+}
+.college-event-card:hover .cec-poster { transform: scale(1.04); }
+.cec-cat-badge {
+  position: absolute; top: 10px; left: 10px;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  font-size: .72rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 20px;
+  letter-spacing: .04em; text-transform: uppercase;
+}
+.cec-body { padding: 14px 16px 16px; }
+.cec-title { font-size: .97rem; font-weight: 700; margin: 0 0 8px; }
+.cec-meta  { font-size: .8rem; color: var(--text-secondary); margin: 3px 0; }
+.cec-stats {
+  display: flex; justify-content: space-between;
+  font-size: .83rem; font-weight: 600;
+  padding: 10px 0; border-top: 1px solid var(--border);
+  margin: 10px 0;
+}
+.cec-stats .free { color: #16a34a; }
+.cec-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.cec-btn { font-size: .78rem !important; padding: 6px 12px !important; }
+.btn-danger-sm {
+  background: rgba(239,68,68,.12); color: #ef4444;
+  border: 1px solid rgba(239,68,68,.3);
+  border-radius: 8px; padding: 6px 12px;
+  font-size: .78rem; font-weight: 600; cursor: pointer;
+  transition: background .2s;
+}
+.btn-danger-sm:hover { background: rgba(239,68,68,.22); }
+
+/* Event list layout */
+.college-events-list { display: flex; flex-direction: column; gap: 16px; }
+
+.college-event-row {
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  background: var(--surface);
+}
+
+.cer-main {
+  display: flex; gap: 16px; padding: 16px;
+  align-items: flex-start;
+}
+.cer-poster-wrap { flex-shrink: 0; width: 90px; height: 68px; border-radius: 8px; overflow: hidden; }
+.cer-poster { width:100%; height:100%; object-fit:cover; }
+
+.cer-info { flex: 1; min-width: 0; }
+.cer-top { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.cer-cat {
+  font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em;
+  background:var(--primary-faint,rgba(99,102,241,.1)); color:var(--primary);
+  padding:2px 8px; border-radius:20px;
+}
+.cer-title { font-size:.97rem; font-weight:700; margin:0; }
+.cer-meta { display:flex; flex-wrap:wrap; gap:12px; font-size:.8rem; color:var(--text-secondary); margin-bottom:6px; }
+.cer-bottom { display:flex; gap:16px; font-size:.83rem; font-weight:600; }
+.cer-price.free { color:#16a34a; }
+
+.cer-actions { display:flex; flex-direction:column; gap:6px; flex-shrink:0; }
+.cer-btn { font-size:.75rem !important; padding:5px 10px !important; }
+
+/* Sub-events */
+.cer-sub-list {
+  border-top:1px solid var(--border);
+  background:rgba(0,0,0,.03);
+  padding:12px 16px;
+  display:flex; flex-direction:column; gap:8px;
+}
+.sub-loading { display:flex; justify-content:center; padding:12px; }
+.sub-empty { font-size:.85rem; color:var(--text-secondary); }
+.link-btn { background:none; border:none; color:var(--primary); cursor:pointer; font-weight:600; font-size:.85rem; }
+
+.sub-event-row {
+  display:flex; align-items:center; justify-content:space-between;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:10px; padding:10px 14px;
+  gap:12px; flex-wrap:wrap;
+}
+.sub-info { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.sub-title { font-size:.88rem; font-weight:700; }
+.sub-meta  { font-size:.78rem; color:var(--text-secondary); }
+.sub-price { font-size:.83rem; font-weight:700; color:var(--primary); }
+.sub-actions { display:flex; gap:6px; }
+
+.subevent-notice {
+  background:rgba(99,102,241,.1);
+  border:1px solid rgba(99,102,241,.3);
+  border-radius:8px; padding:10px 14px;
+  font-size:.85rem; margin-bottom:16px;
+  color:var(--primary);
+}
+
+/* ── Tabs ── */
+.cd-tabs { display:flex; gap:8px; margin-bottom:28px; border-bottom:2px solid var(--border); }
+.cd-tab {
+  background:none; border:none; padding:10px 22px;
+  font-size:.95rem; font-weight:600; color:var(--text-secondary);
+  cursor:pointer; border-bottom:3px solid transparent; margin-bottom:-2px;
+  transition:color .2s, border-color .2s;
+}
+.cd-tab.active { color:var(--primary); border-bottom-color:var(--primary); }
+.cd-tab:hover:not(.active) { color:var(--text); }
+
+.tab-content { }
+.tab-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; flex-wrap:wrap; gap:12px; }
+
+/* ── Festival list ── */
+.festival-list { display:flex; flex-direction:column; gap:16px; }
+
+.festival-row {
+  border:1.5px solid var(--border); border-radius:16px;
+  overflow:hidden; background:var(--surface);
+}
+
+.fest-header-row {
+  display:flex; gap:16px; padding:18px;
+  align-items:flex-start;
+}
+.fest-poster-wrap { flex-shrink:0; width:100px; height:75px; border-radius:10px; overflow:hidden; }
+.fest-poster { width:100%; height:100%; object-fit:cover; }
+.fest-info { flex:1; min-width:0; }
+.fest-name { font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:4px; }
+.fest-edition { font-size:.75rem; font-weight:700; background:rgba(99,102,241,.12); color:var(--primary); padding:2px 10px; border-radius:20px; margin-bottom:6px; display:inline-block; }
+.fest-dates,.fest-venue { font-size:.82rem; color:var(--text-secondary); margin-bottom:3px; }
+.fest-cats { font-size:.8rem; font-weight:600; color:var(--primary); margin-top:4px; }
+.fest-actions { display:flex; flex-direction:column; gap:6px; flex-shrink:0; }
+
+/* ── Festival body ── */
+.fest-body {
+  border-top:1px solid var(--border);
+  padding:18px;
+  background:rgba(0,0,0,.02);
+}
+.fest-section-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.fest-section-title { font-size:.9rem; font-weight:700; color:var(--text); }
+
+/* ── Inline form for category ── */
+.inline-form {
+  display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:10px; padding:12px 14px;
+  margin-bottom:16px;
+}
+.inline-form .form-input { flex:1; min-width:140px; }
+
+/* ── Category block ── */
+.cat-block {
+  border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; margin-bottom:12px; background:var(--bg);
+}
+.cat-header {
+  display:flex; align-items:center; gap:10px;
+  padding:12px 16px;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+}
+.cat-icon { font-size:1.3rem; }
+.cat-name { font-size:.93rem; font-weight:700; }
+.cat-count { font-size:.78rem; color:var(--text-secondary); }
+
+/* ── Sub-event form inside category ── */
+.subevent-form {
+  padding:14px 16px;
+  border-bottom:1px solid var(--border);
+  background:rgba(99,102,241,.04);
+}
+
+/* ── Sub-events list ── */
+.sub-events-list { padding:10px 16px; display:flex; flex-direction:column; gap:8px; }

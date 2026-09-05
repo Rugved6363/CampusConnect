@@ -1,0 +1,273 @@
+.event-detail-page { padding-bottom: 80px; }
+
+/* Banner */
+.banner-wrap {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15,15,19,0.2) 0%,
+    rgba(15,15,19,0.85) 100%
+  );
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+.category-pill-large {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(108,99,255,0.3);
+  border: 1px solid rgba(108,99,255,0.5);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c4bfff;
+  margin-bottom: 10px;
+  backdrop-filter: blur(6px);
+}
+
+.banner-title {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.banner-college {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Layout */
+.detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  padding-top: 32px;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.back-link:hover { color: var(--accent); }
+
+/* Info cards */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+}
+
+.info-icon { font-size: 1.2rem; margin-top: 2px; }
+
+.info-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Description */
+.detail-section { margin-bottom: 32px; }
+
+.detail-section-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text-primary);
+}
+
+.detail-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* Sidebar */
+.detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 84px;
+  align-self: start;
+}
+
+.booking-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.booking-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-price-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.booking-price-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.booking-price-value.free { color: var(--success); }
+
+.book-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
+
+.booking-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.booking-note a { color: var(--accent); }
+
+.sold-out-note { color: var(--danger); }
+
+.share-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.detail-skeleton { padding-top: 32px; }
+
+@media (max-width: 768px) {
+  .banner-wrap { height: 260px; }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sidebar {
+    position: static;
+    order: -1;
+  }
+}
+
+/* ── Festival Sub-Events Banner ── */
+.festival-subevent-banner {
+  margin-top: 24px;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  padding: 24px;
+  background: var(--primary-faint, rgba(99,102,241,.06));
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.fsb-content {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.fsb-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.fsb-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 6px;
+}
+.fsb-desc {
+  font-size: .9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+.fsb-track-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.fsb-track-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.fsb-track-pill.fsb-more {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: transparent;
+}
+.fsb-explore-btn {
+  width: 100%;
+  text-align: center;
+  font-size: .95rem;
+  padding: 13px 20px;
+  border-radius: 12px;
+}
+@media (max-width: 600px) {
+  .fsb-content { flex-direction: column; }
+}

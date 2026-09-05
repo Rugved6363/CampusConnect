@@ -1,0 +1,70 @@
+.payment-sim {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.payment-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: rgba(108,99,255,0.08);
+  border: 1px solid rgba(108,99,255,0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.method-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.method-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.method-tab:hover { border-color: var(--accent); color: var(--text-primary); }
+.method-tab.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--text-primary);
+}
+
+.payment-input-wrap { }
+
+.payment-amount-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+.amount-label { font-size: 0.9rem; color: var(--text-secondary); }
+.amount-value { font-size: 1.3rem; font-weight: 800; color: var(--accent); }
+
+.pay-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
